@@ -1,0 +1,41 @@
+.jsonlint-container {
+    width: 100%;
+}
+
+.jsonlint__field-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.jsonlint__label-wrapper {
+    width: 100%;
+}
+
+.jsonlint__textarea {
+    width: 100%;
+}
+
+.jsonlint__result-container{
+    width: 100%;
+    min-height: 2em;
+}
+
+.jsonlint__result-container--valid {
+    background-color: green;
+}
+
+.jsonlint__result-container--error {
+    background-color: red;
+}
+
+.jsonlint__label-wrapper--vertical {
+    margin-bottom: 0.5em;
+}
+
+.jsonlint__actions-wrapper--vertical {
+    margin-top: 0.5em;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    grid-auto-columns: max-content;
+}

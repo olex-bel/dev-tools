@@ -1,0 +1,24 @@
+extends layout
+
+block styles 
+  link(rel='stylesheet', href='/stylesheets/jsonlint.css')
+
+block content
+  main(class="jsonlint__container")
+    section 
+      div(class="jsonlint__field-wrapper")
+        div(class="jsonlint__label-wrapper jsonlint__label-wrapper--vertical")
+          label(for="json-text") JSON
+        textarea(id="json-text" class="jsonlint__textarea" rows="30" value=jsonText)
+      div(class="jsonlint__actions-wrapper jsonlint__actions-wrapper--vertical")
+        button(id="validate-button" type="button") Validate JSON
+        button(id="clear-button" type="button") Clear
+        button(id="copy-button" type="button") Copy to clipboard
+    section 
+      h2 Result 
+      div(id="result-container" class="jsonlint__result-container")
+        span(id="result-message")
+
+block scripts
+  script(src="javascripts/jsonvalidator.js")
+  script(src="javascripts/jsonlint.js")
