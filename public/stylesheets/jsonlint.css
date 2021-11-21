@@ -1,5 +1,7 @@
-.jsonlint-container {
-    width: 100%;
+.jsonlint__container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .jsonlint__field-wrapper {
@@ -11,31 +13,51 @@
     width: 100%;
 }
 
-.jsonlint__textarea {
-    width: 100%;
-}
-
 .jsonlint__result-container{
     width: 100%;
     min-height: 2em;
+    padding: 5px;
 }
 
 .jsonlint__result-container--valid {
-    background-color: green;
+    background-color: rgb(132, 163, 132);
 }
 
 .jsonlint__result-container--error {
-    background-color: red;
+    background-color: rgb(231, 142, 142);
 }
 
 .jsonlint__label-wrapper--vertical {
     margin-bottom: 0.5em;
 }
 
-.jsonlint__actions-wrapper--vertical {
+.jsonlint__textarea {
+    height: 60vh;
+}
+
+.jsonlint__button {
+    padding: 10px 15px;
+    border: 1px soli;
+}
+
+.jsonlint__section {
+    margin: 5px;
+}
+
+.jsonlint__actions-wrapper {
+    width: 100%;
     margin-top: 0.5em;
     display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 10px;
-    grid-auto-columns: max-content;
+    grid-auto-flow: row;
+    row-gap: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .jsonlint__actions-wrapper {
+        margin-top: 0.5em;
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 5px;
+        grid-auto-columns: max-content;
+    }
 }

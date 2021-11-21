@@ -69,17 +69,17 @@
 
     function showError(params) {
         let { errorMessage, errorCodeSnippet } = params;
-        let message = errorMessage;
+        let message = '<p>' + errorMessage + '</p>';
 
         if (errorCodeSnippet) {
             const lastNewLineIndex = errorCodeSnippet.lastIndexOf('\r');
             const padding = lastNewLineIndex === -1 ? errorCodeSnippet.length : errorCodeSnippet.length - lastNewLineIndex;
 
-            message += '<br/>' + errorCodeSnippet + '<br/>';
-            message += ' '.repeat(padding - 1) + '^';
+            message += '<pre><br/>' + errorCodeSnippet + '<br/>';
+            message += ' '.repeat(padding - 1) + '^</pre>';
         }
 
-        textResultMessage.innerHTML = '<pre>' + message + '</pre>';
+        textResultMessage.innerHTML = message;
         setErrorResultContainerState();
     }
 
