@@ -8,10 +8,10 @@ block content
     section(class="formatter__section") 
       div(class="formatter__field-wrapper")
         div(class="formatter__label-wrapper formatter__label-wrapper--vertical")
-          label(for="json-text") JSON
-        textarea(id="json-text" class="formatter__textarea" value=jsonText)
+          label(for="xml-text") XML
+        textarea(id="xml-text" class="formatter__textarea" value=xmlText)
       div(class="formatter__actions-wrapper")
-        button(id="validate-button" type="button" class="formatter__button") Validate JSON
+        button(id="validate-button" type="button" class="formatter__button") Format XML
         button(id="clear-button" type="button" class="formatter__button") Clear
         button(id="copy-button" type="button" class="formatter__button") Copy to clipboard
     section(class="formatter__section")
@@ -20,4 +20,4 @@ block content
         span(id="result-message")
 
 block scripts
-  script(src="javascripts/dist/jsonlint.bundle.js")
+    script(src="javascripts/dist/xmlformatter.bundle.js")

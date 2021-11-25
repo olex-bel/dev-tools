@@ -161,12 +161,12 @@ module.exports = JSONLexer;
 },{"../stream":11,"./lexerposition":3,"./statemachine":4,"./states/identifier":5,"./states/number":6,"./states/string":7,"./token":8,"./utils":9}],3:[function(require,module,exports){
 function LexerPosition() {
     this.line = 1;
-    this.column = 0;
+    this.column = 1;
 }
 
 LexerPosition.prototype.increaseLineNumber = function () {
     this.line += 1;
-    this.column = 0;
+    this.column = 1;
 };
 LexerPosition.prototype.increaseColumnNumber = function () {
     this.column += 1;
